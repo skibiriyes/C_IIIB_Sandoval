@@ -1,0 +1,74 @@
+"""
+se realiza una calculadora para sumar,dividir, restar y multiplicar con el sistema operativo windows haciendo que limpie la consola cuando da el resultado y reinicie
+Realizado: por Sandoval Cristian
+fecha: 29/05/2025
+"""
+
+
+import os #se importa los comandos del sistema operativo windows
+
+def limpiar_consola(): #para limpiar la consola
+    if os.name == 'nt': #se junta el sitema operativo con name
+         os.system('cls') # se le pone el comando para limpiar consola
+
+def Datos ():#para guardar los datos
+     
+     num1 = float(input("ingrese el primer numero:")) #se ingresa los datos del primer numero
+     num2 = float(input("ingrese el segundo numero:"))#se ingresa los datos
+     return num1, num2 #retorno de los numeros
+
+def SUMA():# se define la suma para los datos
+     print("suma") # se muetra suma en pantallla
+
+     num1, num2 = Datos () # los numero se almacenan en la funcion datos
+     resultado = num1 +num2 # el resultado muestra la suma de los dos numeros
+
+     print (f"\n RESULTADO: {num1} + {num2} = {resultado}")# se muestra el resultado de la suma de los dos numeros
+     input("Presione enter para continuar...") # se agg para que el usaurio presionte enter para continuar
+
+def RESTA():# se define la resta para los datos
+     print("resta") # se muetra resta en pantallla
+
+     num1, num2 = Datos () # los numero se almacenan en la funcion datos
+     resultado = num1 - num2 # el resultado muestra la resta de los dos numeros
+
+     print (f"\n RESULTADO: {num1} - {num2} = {resultado}")# se muestra el resultado de la resta de los dos numeros
+     input("Presione enter para continuar...") # se agg para que el usaurio presionte enter para continuar
+
+def MULTIPLICACION():# se define la MULTIPLICAICON para los datos
+     print("MULTIPLICACION") # se muetra MULTIPLICACION en pantallla
+
+     num1, num2 = Datos () # los numero se almacenan en la funcion datos
+     resultado = num1 * num2 # el resultado muestra la resta de los dos numeros
+
+     print (f"\n RESULTADO: {num1} * {num2} = {resultado}")# se muestra el resultado de la resta de los dos numeros
+     input("Presione enter para continuar...") # se agg para que el usaurio presionte enter para continuar
+
+
+
+
+
+
+while True: # bucle de limpiar consola
+     limpiar_consola() #funcion de limpiar consola
+     print("selecciona una opcion:") # se muestra la opcion en pantalla
+     print("1. SUMA") #se muestra suma
+     print("2. RESTA") #se muestra RESTA
+     print("3. MULTIPLICACION") #se muestra MULTIPLICACION
+    
+     print("4. Salir") #se muestra salir
+     opcion = input("ingrese el numero de la opcion deseada: ")# se pide que ingrese la opcion
+
+     if opcion == '1': #se define la opcion donde 1 es la suma
+          SUMA()       #se elige para que la suma almacene los daatos
+     elif  opcion == '2': #se define la opcion donde 1 es la suma
+          RESTA()       #se elige para que la resta sea opcion     
+     elif  opcion == '3': #se define la opcion donde 1 es la suma
+          MULTIPLICACION()       #se elige para que la MULTIPLICACCION sea opcion
+    
+     elif opcion == '4':# se define la segunda opcion
+          print("\nSaliendo del sistema... ¡Hasta pronto!")# se muestra el final 
+          break #un descanso
+     else: # se especifica el print
+          print("Opcion no valida.") # se muestra en pantalla
+          
