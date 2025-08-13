@@ -1,7 +1,7 @@
 """
-se realiza una calculadora para sumar,dividir, restar y multiplicar con el sistema operativo windows haciendo que limpie la consola cuando da el resultado y reinicie
-Realizado: por Sandoval Cristian
-fecha: 29/05/2025
+se realiza una calculadora para sumar, restar y multiplicar con el sistema operativo windows haciendo que limpie la consola cuando da el resultado y reinicie
+Realizado: por Cristian Sandoval
+fecha: 13/08/2025
 """
 
 
@@ -44,7 +44,14 @@ def MULTIPLICACION():# se define la MULTIPLICAICON para los datos
      print (f"\n RESULTADO: {num1} * {num2} = {resultado}")# se muestra el resultado de la resta de los dos numeros
      input("Presione enter para continuar...") # se agg para que el usaurio presionte enter para continuar
 
+def DIVISION():# se define la DIVISION para los datos
+     print("DIVISON") # se muetra DIVISION en pantallla
 
+     num1, num2 = Datos () # los numero se almacenan en la funcion datos
+     resultado = num1 / num2 # el resultado muestra la resta de los dos numeros
+
+     print (f"\n RESULTADO: {num1} / {num2} = {resultado}")# se muestra el resultado de la resta de los dos numeros
+     input("Presione enter para continuar...") # se agg para que el usaurio presionte enter para continuar
 
 
 
@@ -55,8 +62,8 @@ while True: # bucle de limpiar consola
      print("1. SUMA") #se muestra suma
      print("2. RESTA") #se muestra RESTA
      print("3. MULTIPLICACION") #se muestra MULTIPLICACION
-    
-     print("4. Salir") #se muestra salir
+     print("4. DIVISION") #se muestra DIVISION
+     print("5. Salir") #se muestra salir
      opcion = input("ingrese el numero de la opcion deseada: ")# se pide que ingrese la opcion
 
      if opcion == '1': #se define la opcion donde 1 es la suma
@@ -66,7 +73,10 @@ while True: # bucle de limpiar consola
      elif  opcion == '3': #se define la opcion donde 1 es la suma
           MULTIPLICACION()       #se elige para que la MULTIPLICACCION sea opcion
     
-     elif opcion == '4':# se define la segunda opcion
+     elif  opcion == '4': #se define la opcion donde 1 es la suma
+          DIVISION()       #se elige para que la DEVISSION sea opcion  
+    
+     elif opcion == '5':# se define la segunda opcion
           print("\nSaliendo del sistema... ¡Hasta pronto!")# se muestra el final 
           break #un descanso
      else: # se especifica el print
